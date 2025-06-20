@@ -1,0 +1,179 @@
+
+/* Global style */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+.slider-wrapper {
+  width: 100%;
+  position: absolute;
+  
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider-image-container {
+  width: 100%;
+  text-align: center;
+}
+
+.slider-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.card {
+    position: relative;
+    bottom: 30rem;
+    right: 25.75rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  max-width: 350px;
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  box-sizing: border-box;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  margin: 0;
+}
+
+.card p {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #666;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  font-size: large;
+}
+
+.button-container button {
+  padding: 0.5rem 1.2rem;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+.custom-link {
+  text-decoration: none;
+  position: relative;
+  left: 5.5rem;
+  bottom: 2.7rem;
+  font-size: small;
+}
+
+
+
+/* img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+} */
+
+@media (max-width: 768px) {
+  
+  html, body {
+    overflow-y: hidden;
+  }
+
+  .slider-wrapper {
+    height: 100vh;
+    position: absolute;
+    padding: 1rem 0;
+  }
+
+  .slider-image {
+    height: 60vh; 
+    border-radius: 8px;
+  }
+
+  .card {
+    position: relative;
+   top: -35rem;
+    width: 80%;
+    max-width: 100%;
+    margin: 1rem auto;
+    padding: 1rem;
+    bottom: auto;
+    right: auto;
+  }
+
+  .card h4 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+
+  .button-container {
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
+
+  .button-container button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+  .custom-link {
+  text-decoration: none;
+  position: relative;
+  left: 2.8rem;
+  bottom: 1.5rem;
+  font-size: small;
+}
+}
+
+
+
+

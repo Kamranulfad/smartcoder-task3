@@ -1,0 +1,195 @@
+/* === NAVBAR STYLING === */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0px;
+  
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  padding-bottom: 0rem;
+  background-color: transparent;
+  position: relative;
+  flex-wrap: wrap;
+  
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.icon {
+  font-size: 2rem;
+  background-color: #f0f0f0;
+  color: #00ff15;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo p {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: rgb(80, 75, 75);
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.logo p span {
+  color: yellow;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.nav-links,
+.auth-buttons {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+/* ✅ Shared styling across all interactive elements */
+.nav-link,
+.login-btn,
+.signup-btn {
+  font-weight: 500;
+  font-size: 1.4rem;          /* Unified font size */
+  padding: 0.5rem 1rem;       /* Unified padding */
+  border-radius: 8px;         /* Unified border radius */
+  text-decoration: none;
+  color: #333;
+  border: none;
+  background: transparent;    /* Fixed typo from 'w' */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.signup-btn{
+  background-color: black;
+  color:whitesmoke;
+}
+.dropdown-menu {
+  position: absolute;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 150px;
+  z-index: 99;
+  position: absolute;
+  top: 100%;       
+  left: 0;         
+  background-color:whitesmoke;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  z-index: 1000;
+}
+.dropdown {
+  position: relative;
+  padding: 0.3rem 0;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;       
+  left: 0;          
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  z-index: 1000;
+  min-width: 150px;
+}
+
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+/* === HAMBURGER === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+}
+
+/* === MOBILE RESPONSIVE === */
+@media (max-width: 768px) {
+ .hamburger {
+  display: flex !important;
+}
+
+  .navbar-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .navbar-right.open {
+    display: flex;
+  }
+
+  .nav-links,
+  .auth-buttons {
+    flex-direction: column;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .nav-links li,
+  .auth-buttons li {
+    width: 100%;
+  }
+
+  .nav-link,
+  .login-btn,
+  .signup-btn {
+    width: 100%;
+    text-align: left;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .dropdown-menu li {
+    padding: 0.25rem 0;
+  }
+}
